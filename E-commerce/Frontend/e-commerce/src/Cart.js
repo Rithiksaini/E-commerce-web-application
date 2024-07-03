@@ -8,7 +8,10 @@ export default function Cart() {
     const [cart, setCart] = useState([])
     let userId = sessionStorage.getItem('userId')
     useEffect(() => {
+       getData()
        
+    }, [])
+    const getData=()=>{
         axios.get("http://localhost:5000/customer/cart/"+userId, { headers: { Authorization: sessionStorage.getItem("token") } }).then((res) => {
             console.log(res.data.data)
             setCart(res.data.data)
@@ -17,11 +20,12 @@ export default function Cart() {
                 console.log(err)
             }
             )
-    }, [])
-    const deleted = (pid) => {
-        axios.delete("http://localhost:5000/customer/cart/"+ pid, { headers: { Authorization: sessionStorage.getItem("token") } }).then((res)=>{
+    }
+    const deleted = (id) => {
+        axios.delete("http://localhost:5000/customer/cart/"+ id, { headers: { Authorization: sessionStorage.getItem("token") } }).then((res)=>{
             
             toast.success("Deleted Succesfully")
+            getData()
         })
         .catch((err)=>{
             console.log(err)
@@ -55,7 +59,7 @@ export default function Cart() {
                                         </div>
                                     </div>
                                     <div>
-                                        <button onClick={() => { deleted(el.productId?._id) }} style={{ width: '10%', marginLeft: '40%' }}><i className="bi bi-trash-fill"></i></button>
+                                        <button onClick={() => { deleted(el?._id) }} style={{ width: '10%', marginLeft: '40%' }}><i className="bi bi-trash-fill"></i></button>
                                     </div>
                                 </div>
                             </div>
