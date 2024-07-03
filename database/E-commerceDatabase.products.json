@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "6682d61ec34569b86cd34048"
+  },
+  "autoId": 2,
+  "name": "Exide EPIQ",
+  "price": 3500,
+  "detail": "This Product has 60 month Warranty and used in cars",
+  "image": "product/1719999492151-picture-exide epiq.jpg",
+  "status": true,
+  "createdAt": {
+    "$date": "2024-07-01T16:15:26.131Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66851629b6cd6488ea59cbb1"
+  },
+  "autoId": 3,
+  "name": "Exide MATRIX",
+  "price": 4000,
+  "detail": "This Product has 72 Month Warranty, used both in car and suv",
+  "image": "product/1720000817919-picture-matrix.jpeg",
+  "status": true,
+  "createdAt": {
+    "$date": "2024-07-03T09:13:13.388Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66851e61b6cd6488ea59cbfe"
+  },
+  "autoId": 3,
+  "name": "Exide MILEAGE",
+  "price": 4500,
+  "detail": "ML40LBH/RBH   This product has 60 month waranty",
+  "image": "product/1720000097756-picture-exide mileage.jpg",
+  "status": true,
+  "createdAt": {
+    "$date": "2024-07-03T09:48:17.938Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66851f02b6cd6488ea59cc01"
+  },
+  "autoId": 4,
+  "name": "Exide EEZY",
+  "price": 6900,
+  "detail": "EY700L/R This Product has 48 month warranty",
+  "image": "product/1720000258705-picture-exide eezy.jpg",
+  "status": true,
+  "createdAt": {
+    "$date": "2024-07-03T09:50:58.752Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6685224745181d60a53bc3fa"
+  },
+  "autoId": 5,
+  "name": "Exide EKO",
+  "price": 3200,
+  "detail": "EKO32 this Product has 24 month warranty ",
+  "image": "product/1720001095696-picture-exide eko.webp",
+  "status": true,
+  "createdAt": {
+    "$date": "2024-07-03T10:04:55.775Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6685239b45181d60a53bc431"
+  },
+  "autoId": 6,
+  "name": "Exide RIDE",
+  "price": 3100,
+  "detail": "RIDE35L/R This Product has 24 Month warranty",
+  "image": "product/1720001435240-picture-exide ride.webp",
+  "status": true,
+  "createdAt": {
+    "$date": "2024-07-03T10:10:35.257Z"
+  },
+  "__v": 0
+}]

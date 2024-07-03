@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "66829d85c81ab748c48fa759"
+  },
+  "autoId": 1,
+  "name": "Admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$PrkzGZClzUXSBjWPa6iWX.TXAOLzyEuX5sJvbrV8TbkyF/AJL2QaW",
+  "userType": 1,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-07-01T12:13:57.441Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6682d1ddd72fa6549ea9092f"
+  },
+  "autoId": 2,
+  "name": "Rithik saini",
+  "email": "rithik@gmail.com",
+  "password": "$2b$10$L3hEDsNcAU7uM8jsWkKrj.Q7Rps8IvAUrgMSLxnOC7yNUE/IF6Rte",
+  "userType": 2,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-07-01T15:57:17.277Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6684f000df5a5b14c36fa1dc"
+  },
+  "autoId": 3,
+  "name": "shiv kumar",
+  "email": "shiv@gmail.com",
+  "password": "$2b$10$FsPwn7lArIf6kBMHpGmeFujr5Zq5GGt9rdRKYzWiTvP6cGhVtOHqG",
+  "userType": 2,
+  "status": true,
+  "createdAt": {
+    "$date": "2024-07-03T06:30:24.221Z"
+  },
+  "__v": 0
+}]

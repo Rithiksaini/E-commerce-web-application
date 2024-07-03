@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "6488b3d2-67e3-4ec4-8d84-55db60a46ef7",
+		"name": "E-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33046045"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjgyOWQ4NWM4MWFiNzQ4YzQ4ZmE3NTkiLCJuYW1lIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoxLCJpYXQiOjE3MTk4NDcxMzMsImV4cCI6MTcxOTg1MDczM30.u3rx9xTOTgvQF-U9xBGmNRxQBMsRx0wmT94kUv2CAek"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "product1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "this is product 1",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"type": "file",
+											"src": "postman-cloud:///1ef37bd2-70fd-43b0-8700-936a2d36f692"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:5000/admin/products/add",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"admin",
+										"products",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjgyOWQ4NWM4MWFiNzQ4YzQ4ZmE3NTkiLCJuYW1lIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoxLCJpYXQiOjE3MTk4NDcxMzMsImV4cCI6MTcxOTg1MDczM30.u3rx9xTOTgvQF-U9xBGmNRxQBMsRx0wmT94kUv2CAek"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/admin/products",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"admin",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "6682c929d72fa6549ea90928",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "Product1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:5000/admin/products/6682c929d72fa6549ea90928",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"admin",
+										"products",
+										"6682c929d72fa6549ea90928"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/admin/products/6682c929d72fa6549ea90928",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"admin",
+										"products",
+										"6682c929d72fa6549ea90928"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"token\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/customer/products",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"customer",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/customer/products/6682c929d72fa6549ea90928",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"customer",
+										"products",
+										"6682c929d72fa6549ea90928"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/customer/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"customer",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "6682d1ddd72fa6549ea9092f",
+											"type": "text"
+										},
+										{
+											"key": "productId",
+											"value": "6682d61ec34569b86cd34048",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:5000/customer/cart",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"customer",
+										"cart"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/customer/cart",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"customer",
+										"cart"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

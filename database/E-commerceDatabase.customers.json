@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "6682d1ddd72fa6549ea90932"
+  },
+  "autoId": 1,
+  "name": "Rithik saini",
+  "email": "rithik@gmail.com",
+  "contact": "8728068930",
+  "address": "ludhiana",
+  "gender": "male",
+  "userId": {
+    "$oid": "6682d1ddd72fa6549ea9092f"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6684f000df5a5b14c36fa1df"
+  },
+  "autoId": 2,
+  "name": "shiv kumar",
+  "email": "shiv@gmail.com",
+  "contact": "9874563214",
+  "address": "ludhiana",
+  "gender": "male",
+  "userId": {
+    "$oid": "6684f000df5a5b14c36fa1dc"
+  },
+  "__v": 0
+}]
